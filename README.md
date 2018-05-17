@@ -44,10 +44,10 @@ npm run start-chrome
 
 Run simple crawler test.
 Parameters:
+- initial-url: Initial Url to open and parse links.
 - chunks: Number of concurrent url calls.
-- data-file: File that contains url test data.
 ```
-npm run crawler-test [chunks] [data-file]
+npm run crawler-test [initial-url] [chunks]
 ```
 
 This will stop the chrome headless process
@@ -63,7 +63,7 @@ All previous command can be executed using pika script
 Usage: pika [command]
 
 where [command] is one of:
-   crawler-test [chunks] [data-file] - run the crawler test - also starts and stops chrome
+   crawler-test [initial-url] [chunks] - run the crawler test - also starts and stops chrome
      - initial-url: Initial Url to open and parse links.
      - chunks: Number of concurrent url calls. Default 2
    crawler-test-docker - run test using a chrome headless docker
